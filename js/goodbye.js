@@ -125,29 +125,24 @@ $(document).keydown(function(e) {
                     appendCommand(cmd);
             }
     }
-});
-
-$(document).keypress(function(e) {
-    e = e || window.event;
-    var keyCode = typeof e.which === "number" ? e.which : e.keyCode;
-
     // tecla pulsada ??
     switch (keyCode) {
-            // ENTER
-            case 13:
-                    {
-                            terminal.append("\n");
+        // ENTER
+        case 13:
+                {
+                        terminal.append("\n");
 
-                            processCommand();
-                            displayPrompt();
-                            break;
-                    }
-            default:
-                    {
-                            appendCommand(String.fromCharCode(keyCode));
-                    }
+                        processCommand();
+                        displayPrompt();
+                        break;
+                }
+        default:
+                {
+                        appendCommand(String.fromCharCode(keyCode));
+                }
     }
 });
+
 
 // Título de la ventana
 title.text("");
