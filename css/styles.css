@@ -15,10 +15,6 @@ html, body {
     box-sizing: border-box;
   }
   
-  textarea, input, button {
-    outline: none;
-  }
-  
   .window-button, .window .buttons .close, .window .buttons .minimize, .window .buttons .maximize {
     padding: 0;
     margin: 0;
@@ -32,7 +28,6 @@ html, body {
   }
   
   .window {
-    animation: bounceIn 1s ease-in-out;
     width: 640px;
   }
   .window .handle {
@@ -92,6 +87,13 @@ html, body {
   
   .path {
     color: #5ed7ff;
+  }
+
+  .hide {
+    display: none;
+  }
+  .bounceInAnim {
+    animation: bounceIn 1s ease-in-out;
   }
   
   @keyframes blink {
